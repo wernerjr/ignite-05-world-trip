@@ -21,7 +21,18 @@ export default function GridIcon({ image, children }: GridIconProps){
     justify="center"   
   >
     {!isMobile && <Image src={image} alt={children} />}    
-    <Text fontWeight={600} fontSize={[18, 22]} lineHeight="10">
+    <Text
+      alignSelf={["flex-start",
+      "flex-start",
+      "flex-start",
+      "center"]}
+      fontWeight={600}
+      fontSize={[18,
+      18,
+      18
+      ,22]}
+      lineHeight="10"
+    >
       {isMobile && <Icon as={BsDot} color="yellow.500" fontSize={48} />}
       {children}
     </Text>

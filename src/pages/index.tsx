@@ -76,13 +76,12 @@ export default function Home() {
     >
       <Header />
       <Banner />
-      <SimpleGrid
-        h="48"        
+      <SimpleGrid       
         gap="2" 
         minChildWidth="170px" 
         align="flex-start"  
-        px="1" 
-        my="4"     
+        px="1"    
+        pt="10"
       >
         <GridIcon image="/images/cocktail.png">vida noturna</GridIcon>
         <GridIcon image="/images/beach.png">praia</GridIcon>
@@ -94,7 +93,7 @@ export default function Home() {
         direction="column"
         align="center"
         justify="center"    
-        minHeight="40"    
+        minHeight="40" 
       >
         <Text fontWeight={600} fontSize={[22, 28]} color="gray.700" >
           Vamos nessa?
