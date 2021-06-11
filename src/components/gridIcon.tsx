@@ -11,8 +11,7 @@ export default function GridIcon({ image, children }: GridIconProps){
     <Flex
     direction="column"
     align="center"
-    justify="center"
-    my="20"
+    justify="center"   
   >
     <Image src={image} alt={children} />
     <Text fontWeight={600} fontSize={22} lineHeight="10">
