@@ -1,4 +1,5 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Icon, Image, Text, useBreakpointValue } from "@chakra-ui/react";
+import { BsDot } from 'react-icons/bs';
 
 interface GridIconProps{
   image: string;
@@ -7,14 +8,21 @@ interface GridIconProps{
 
 
 export default function GridIcon({ image, children }: GridIconProps){
+
+  const isMobile = useBreakpointValue({
+    base: true, 
+    lg: false,
+  });
+
   return(
     <Flex
     direction="column"
-    align="center"
+    align={[null, "center"]}
     justify="center"   
   >
-    <Image src={image} alt={children} />
-    <Text fontWeight={600} fontSize={22} lineHeight="10">
+    {!isMobile && <Image src={image} alt={children} />}    
+    <Text fontWeight={600} fontSize={[18, 22]} lineHeight="10">
+      {isMobile && <Icon as={BsDot} color="yellow.500" fontSize={48} />}
       {children}
     </Text>
   </Flex>

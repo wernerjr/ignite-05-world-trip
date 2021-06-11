@@ -1,4 +1,4 @@
-import { Flex, SimpleGrid } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Text, useBreakpointValue } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, 
 { Navigation,
@@ -59,12 +59,18 @@ const continents = [
 
 
 export default function Home() {
+
+  const isMobile = useBreakpointValue({
+    base: true, 
+    lg: false,
+  });
+
   return (
     <Flex   
       h="100vh"  
       w="100vw"  
       direction="column"
-      justify="center"
+      justify="flex-start"
       maxWidth="1440"
       mx="auto"  
     >
@@ -74,7 +80,9 @@ export default function Home() {
         h="48"        
         gap="2" 
         minChildWidth="170px" 
-        align="flex-start"        
+        align="flex-start"  
+        px="1" 
+        my="4"     
       >
         <GridIcon image="/images/cocktail.png">vida noturna</GridIcon>
         <GridIcon image="/images/beach.png">praia</GridIcon>
@@ -83,7 +91,19 @@ export default function Home() {
         <GridIcon image="/images/more.png">e mais...</GridIcon>
       </SimpleGrid>
       <Flex
-        flex="1"
+        direction="column"
+        align="center"
+        justify="center"    
+        minHeight="40"    
+      >
+        <Text fontWeight={600} fontSize={[22, 28]} color="gray.700" >
+          Vamos nessa?
+        </Text>
+        <Text fontWeight={600} fontSize={[22, 28]} textAlign="center" color="gray.700" >
+          Então escolha seu continente
+        </Text>
+      </Flex>
+      <Flex        
         minHeight="80"
         paddingBottom="10"
       >

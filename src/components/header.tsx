@@ -11,7 +11,7 @@ export default function Header(){
       align="center"
       justify="center"
     >
-      <Image src='/images/logo.png' h="12" />
+      <Image src='/images/logo.png' />
     </Flex>
   )
 }
