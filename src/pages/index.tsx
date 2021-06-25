@@ -115,7 +115,7 @@ export default function Home() {
         className="mySwiper"        
       >
         {continents.map(continent => (
-          <SwiperSlide>
+          <SwiperSlide key={continent.title}>
             <SwiperSlideContent 
               title={continent.title}
               subtitle={continent.subtitle}
