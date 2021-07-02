@@ -3,7 +3,6 @@ import ContinentBanner from "../components/continentBanner";
 import Header from "../components/header";
 import { MdInfoOutline } from 'react-icons/md';
 
-
 export default function Continent() {
 
   return (
@@ -94,40 +93,9 @@ export default function Continent() {
                 Reino Unido
               </Text>
             </Stack>
-            <Avatar size="md" name="Werner Junior" src="https://github.com/wernerjr.png"/>
+            <Avatar size="md" name="Werner Junior" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.svg.png"/>
           </HStack>
         </Flex>    
-
-        <Flex
-          direction="column"
-          maxWidth="400px"
-          borderColor="yellow.400"
-          borderWidth="1px"
-          borderRadius="8"
-          mb="4"
-        >
-          <Image src="/images/europe.jpg" borderTopRadius="8" />
-          <HStack spacing="auto" p="6">
-            <Stack>
-              <Text
-                fontWeight={600}
-                fontSize={[30]}
-                lineHeight="10"
-                >
-                Londres
-              </Text>
-              <Text
-                fontWeight={500}
-                fontSize={[24]}
-                lineHeight="10"
-                color="gray.400"
-                >
-                Reino Unido
-              </Text>
-            </Stack>
-            <Avatar size="md" name="Werner Junior" src="https://github.com/wernerjr.png"/>
-          </HStack>
-        </Flex>  
       </SimpleGrid>
     </Flex>
   )

@@ -1,4 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 interface SwiperSlideProps {
   image: string;
@@ -8,23 +9,25 @@ interface SwiperSlideProps {
 
 export default function SwiperSlideContent({ image, title, subtitle }: SwiperSlideProps){
   return (
-    <Flex
-      w="100%"
-      h="100%"
-      backgroundImage={`url(${image})`}
-      backgroundRepeat="no-repeat"
-      backgroundAttachment="center"
-      backgroundPosition="center"
-      align="center"
-      justify="center"
-      direction="column"
-    >
-      <Text fontWeight={600} fontSize={28} color="gray.50" >
-        {title}
-      </Text>
-      <Text fontWeight={600} fontSize={14} color="gray.50" >
-        {subtitle}
-      </Text>
-    </Flex>
+    <Link href="/continent">
+      <Flex
+        w="100%"
+        h="100%"
+        backgroundImage={`url(${image})`}
+        backgroundRepeat="no-repeat"
+        backgroundAttachment="center"
+        backgroundPosition="center"
+        align="center"
+        justify="center"
+        direction="column"
+      >
+        <Text fontWeight={600} fontSize={28} color="gray.50" >
+          {title}
+        </Text>
+        <Text fontWeight={600} fontSize={14} color="gray.50" >
+          {subtitle}
+        </Text>
+      </Flex>
+    </Link>
   )
 }

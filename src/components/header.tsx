@@ -1,17 +1,29 @@
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex, Icon } from "@chakra-ui/react";
+import { MdChevronLeft } from 'react-icons/md'
+import { useRouter } from "next/dist/client/router";
+import Link from "next/link";
 
 export default function Header(){
+
+  const { asPath }  = useRouter();
+
   return (
     <Flex
       as="header"
       w="100%"
       maxWidth={1480}
       mx="auto"
-      my="6"
+      minHeight="16"
       align="center"
-      justify="center"
+      px="8"
+      justify="flex-start"
+      bg="url('/images/logo.png') center no-repeat"
     >
-      <Image src='/images/logo.png' />
+      { asPath !== '/' && 
+        <Link href="/">
+          <Icon as={MdChevronLeft} fontSize={20} cursor="pointer" />
+        </Link>
+      }
     </Flex>
   )
 }

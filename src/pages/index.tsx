@@ -1,5 +1,6 @@
 import { Flex, SimpleGrid, Text, useBreakpointValue } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import SwiperCore, 
 { Navigation,
   Pagination,
@@ -115,12 +116,12 @@ export default function Home() {
         className="mySwiper"        
       >
         {continents.map(continent => (
-          <SwiperSlide key={continent.title}>
+          <SwiperSlide key={continent.title}>       
             <SwiperSlideContent 
               title={continent.title}
               subtitle={continent.subtitle}
               image={continent.image}
-            />
+            />       
           </SwiperSlide>
         ))}
       </Swiper>
